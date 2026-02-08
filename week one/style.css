@@ -1,0 +1,144 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
+}
+
+body{
+  background:#fff;
+}
+
+/*headerka */
+
+.header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:15px 89px;
+}
+
+.logo{
+  height:20px;
+}
+
+
+.search-bar {
+  position: fixed;
+  display:flex;
+  align-items:center;
+  top: 10;
+  left: 35%;
+  z-index: 1000;
+  gap:10px;
+  border:1px solid #ff0000;
+  padding:8px 15px;
+  border-radius:30px;
+   box-shadow:0 2px 6px rgba(0,0,0,.1);
+}
+
+/*qaybta searchka*/
+.searching{
+  color:#d60000;
+}
+
+.header-right{
+  display:flex;
+  gap:15px;
+  align-items:center;
+}
+
+.menu-icon{
+  width: 18px;
+  height: 18px;
+  
+}
+
+
+/*MAIN */
+.container{
+  padding:30px 40px;
+}
+
+.section{
+  margin-bottom:40px;
+}
+
+.section-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:20px;
+}
+
+.arrows{
+  font-size:22px;
+  cursor:pointer;
+}
+
+  /*Cards*/
+
+.cards{
+  display:flex;
+  gap:20px;
+  overflow-x:auto;
+}
+
+.card{
+  min-width:220px;
+  position:relative;
+}
+
+.card{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.card img{
+  width:100%;
+  height:150px;
+  object-fit:cover;
+  border-radius:15px;
+}
+
+
+/* absolute elements */
+
+.badge{
+  position:absolute;
+  top:10px;
+  left:10px;
+  background:white;
+  padding:4px 8px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:bold;
+}
+
+
+
+.title{
+  margin-top:8px;
+  font-weight:bold;
+}
+
+.price{
+  color:#555;
+  font-size:14px;
+}
+
+/*RESPONSIVE*/
+@media(max-width:768px){
+  .header{
+    padding:15px;
+  }
+
+  .search-bar{
+    display:none;
+  }
+
+  .container{
+    padding:20px;
+  }
+}

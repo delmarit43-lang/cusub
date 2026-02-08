@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <title>ProHealth</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-slate-50 text-slate-800">
+
+    <!-- NAVBAR -->
+    <header class="absolute top-0 w-full z-30">
+      <div class="max-w-7xl mx-auto px-6 py-5 flex items-center">
+
+        <!-- LOGO (LEFT) -->
+        <h1 class="flex items-center gap-2 text-xl font-bold text-white mr-auto">
+
+          <!-- ICON -->
+          <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <!-- Heart -->
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M3 9a4 4 0 014-4c2 0 3 1 5 3 2-2 3-3 5-3a4 4 0 014 4c0 5-9 11-9 11S3 14 3 9z" />
+            <!-- Pulse -->
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 12h4l2-4 4 8 2-4h6" />
+          </svg>
+
+          <!-- TEXT -->
+          ProHealth
+        </h1>
+
+        <!-- NAV LINKS (CENTER REAL) -->
+        <nav class="hidden md:flex gap-8 text-white/90 text-sm absolute left-1/2 -translate-x-1/2">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Find Doctor</a>
+          <a href="#">Pages</a>
+          <a href="#">Contact</a>
+        </nav>
+
+
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="relative pt-32 pb-40 text-white overflow-hidden">
+
+      <!-- Background -->
+      <div class="absolute inset-0 flex items-center justify-center">
+
+        <!-- IMAGE (DOCTOR ONLY, CLEAN & CENTERED) -->
+        <img src="./2b218345934f046c6dc48881fb743233-removebg-preview.png" class="max-h-full w-auto object-contain"
+          alt="Doctor" />
+
+        <!-- GRADIENT OVERLAY -->
+        <div class="absolute inset-0 bg-gradient-to-r from-sky-900/80 via-sky-700/60 to-sky-500/30"></div>
+      </div>
+
+      <!-- Content -->
+      <div class="relative max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+
+        <!-- TEXT -->
+        <div>
+          <h2 class="text-4xl md:text-5xl font-bold leading-tight">
+            Compassionate care,<br> exceptional results
+          </h2>
+
+          <p class="mt-6 text-white/80 max-w-lg">
+            Our team of experienced doctors and healthcare professionals are committed
+            to providing quality care and personalized attention.
+          </p>
+
+          <div class="mt-10">
+            <button
+              class="inline-flex items-center gap-3 bg-white text-sky-700 px-6 py-3 rounded-xl font-semibold hover:bg-slate-100 transition">
+              ▶ See how we work
+            </button>
+          </div>
+        </div>
+
+        <!-- FLOATING BADGE -->
+        <div class="absolute top-20 right-6 bg-white rounded-xl p-4 flex items-center gap-3 shadow-lg">
+          <div class="flex -space-x-2">
+            <img src="./profile 1 .jpg" class="w-8 h-8 rounded-full border-2 border-white" />
+            <img src="./profile 2 .jpg" class="w-8 h-8 rounded-full border-2 border-white" />
+            <img src="./profile 3 .jpg" class="w-8 h-8 rounded-full border-2 border-white" />
+          </div>
+          <div>
+            <p class="font-bold text-sky-700">150K+</p>
+            <p class="text-xs text-slate-500">Patient Recover</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="relative -mt-24 z-20">
+      <div class="max-w-6xl mx-auto bg-white/80 backdrop-blur-md rounded-3xl shadow-lg px-8 py-10
+              grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+
+        <div>
+          <h3 class="text-3xl font-bold text-sky-600">20+</h3>
+          <p class="text-sm text-slate-500">Years of experience</p>
+        </div>
+
+        <div>
+          <h3 class="text-3xl font-bold text-sky-600">95%</h3>
+          <p class="text-sm text-slate-500">Patient satisfaction</p>
+        </div>
+
+        <div>
+          <h3 class="text-3xl font-bold text-sky-600">5000+</h3>
+          <p class="text-sm text-slate-500">Patients annually</p>
+        </div>
+
+        <div>
+          <h3 class="text-3xl font-bold text-sky-600">10+</h3>
+          <p class="text-sm text-slate-500">Healthcare providers</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="relative py-24 bg-white overflow-hidden">
+      <div class="absolute -top-32 -right-40 w-[500px] h-[500px] bg-sky-100 rounded-full opacity-60"></div>
+
+      <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
+        <div>
+          <p class="text-sky-600 font-semibold uppercase text-sm">About Us</p>
+          <h2 class="text-3xl md:text-4xl font-bold mt-4">
+            ProHealth is a team of experienced medical <br> professionals
+          </h2>
+          <p class="mt-6 text-slate-600 max-w-lg">
+            Dedicated to providing high-quality <br> healthcare services with a holistic
+            approach <br> focusing on treating the whole person.
+          </p>
+        </div>
+
+        <div>
+          <img src="./sawir.jpg" class="rounded-3xl w-full object-cover" />
+        </div>
+      </div>
+    </section>
+
+    <!-- DEPARTMENTS -->
+    <section class="bg-white py-24">
+      <div class="max-w-7xl mx-auto px-6">
+        <p class="text-sky-600 font-semibold uppercase text-sm">Our Departments</p>
+        <h2 class="text-sky-600 text-3xl md:text-4xl font-bold mt-4 mb-12">
+          For Your Health
+        </h2>
+
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+          <!-- Emergency -->
+          <div class="border border-sky-200 rounded-2xl p-6 flex items-center gap-4">
+            <svg class="w-10 h-10 text-sky-600" fill="none" stroke="currentColor" stroke-width="1.5"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 9v4m0 4h.01M4.93 19h14.14c1.54 0 2.5-1.67 1.73-3L13.73 4c-.77-1.33-2.69-1.33-3.46 0L3.2 16c-.77 1.33.19 3 1.73 3z" />
+            </svg>
+            <h3 class="font-medium">Emergency Department</h3>
+          </div>
+
+          <!-- Pediatric -->
+          <div class="border border-sky-200 rounded-2xl p-6 flex items-center gap-4">
+            <svg class="w-10 h-10 text-sky-600" fill="none" stroke="currentColor" stroke-width="1.5"
+              viewBox="0 0 24 24">
+              <circle cx="12" cy="7" r="3" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5.5 20a6.5 6.5 0 0113 0" />
+            </svg>
+            <h3 class="font-medium">Pediatric Department</h3>
+          </div>
+
+          <!-- OB-GYN -->
+          <div class="border border-sky-200 rounded-2xl p-6 flex items-center gap-4">
+            <svg class="w-10 h-10 text-sky-600" fill="none" stroke="currentColor" stroke-width="1.5"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 3c4 0 7 3 7 7 0 5-7 11-7 11S5 15 5 10c0-4 3-7 7-7z" />
+            </svg>
+            <h3 class="font-medium">Obstetrics & Gynecology</h3>
+          </div>
+
+          <!-- Cardiology -->
+          <div class="border border-sky-200 rounded-2xl p-6 flex items-center gap-4">
+            <svg class="w-10 h-10 text-sky-600" fill="none" stroke="currentColor" stroke-width="1.5"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 9c0-2.5 2-4 4-4 2 0 3 1.5 5 3 2-1.5 3-3 5-3 2 0 4 1.5 4 4 0 5-9 11-9 11S3 14 3 9z" />
+            </svg>
+            <h3 class="font-medium">Cardiology Department</h3>
+          </div>
+
+          <!-- Neurology -->
+          <div class="border border-sky-200 rounded-2xl p-6 flex items-center gap-4">
+            <svg class="w-10 h-10 text-sky-600" fill="none" stroke="currentColor" stroke-width="1.5"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9 4a4 4 0 014 4v12a4 4 0 11-8 0V8a4 4 0 014-4z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 8a4 4 0 014-4" />
+            </svg>
+            <h3 class="font-medium">Neurology Department</h3>
+          </div>
+
+          <!-- Psychiatry -->
+          <div class="border border-sky-200 rounded-2xl p-6 flex items-center gap-4">
+            <svg class="w-10 h-10 text-sky-600" fill="none" stroke="currentColor" stroke-width="1.5"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3a7 7 0 00-4 12v5h8v-5a7 7 0 00-4-12z" />
+            </svg>
+            <h3 class="font-medium">Psychiatry Department</h3>
+          </div>
+
+        </div>
+
+
+      </div>
+    </section>
+
+  </body>
+
+</html>

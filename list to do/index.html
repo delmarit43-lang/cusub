@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> To do List </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gray-200 flex items-center justify-center">
+
+  <!-- App Box -->
+  <div class="bg-white p-6 rounded-lg w-full max-w-sm">
+
+    <h1 class="text-2xl font-bold text-center mb-4">To do system</h1>
+
+    <!-- Input -->
+    <div class="flex gap-2 mb-4">
+      <input
+        id="taskInput"
+        type="text"
+        placeholder="Write task..."
+        class="flex-1 border px-3 py-2 rounded"
+      >
+      <button
+        onclick="addTask()"
+        class="bg-blue-600 text-white px-4 rounded"
+      >
+        Add
+      </button>
+    </div>
+
+    <!-- Task Count -->
+    <p id="count" class="text-sm text-gray-600 mb-2">
+      Total: 0
+    </p>
+
+    <!-- List -->
+    <ul id="taskList"></ul>
+
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    // Get elements
+    const taskInput = document.getElementById("taskInput");
+    const taskList = document.getElementById("taskList");
+    const count = document.getElementById("count");
+
+    // Add Task (CREATE)
+    function addTask() {
+      const text = taskInput.value;
+
+      if (text === "") {
+        alert("Please write something");
+        return;
+      }
+
+      // Create list item
+      const li = document.createElement("li");
+      li.className = "flex justify-between items-center border p-2 mb-2";
+
+      // Task text
+      const span = document.createElement("span");
+      span.textContent = text;
+
+      // Delete button
+
+      const btn = document.createElement("button");
+      btn.textContent = "Delete";
+      btn.className = "text-red-600";
+      btn.onclick = function () {
+        li.remove();
+        updateCount();
+      };
+
+      // Add elements
+
+      li.appendChild(span);
+      li.appendChild(btn);
+      taskList.appendChild(li);
+
+      taskInput.value = "";
+      updateCount();
+    }
+
+    // Update task count (READ)
+
+    function updateCount() {
+      count.textContent = "Total: " + taskList.children.length;
+    }
+  </script>
+
+</body>
+</html>

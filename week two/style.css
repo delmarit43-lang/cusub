@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #000000;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #000000;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header i {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.header i:hover {
+  color: red;
+  transform: scale(1.1);
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  width: 90px;
+}
+
+.center {
+  display: flex;
+  flex: 1;
+  max-width: 500px;
+}
+
+.center input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #000000;
+  border-radius: 20px 0 0 20px;
+}
+
+.center button {
+  padding: 8px 15px;
+  border: 1px solid #ccc;
+  border-left: none;
+  background: #f0f0f0;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.center button:hover {
+  background: #e5e5e5;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.profile {
+  border-radius: 50%;
+}
+
+/* MAIN */
+.main {
+  display: flex;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 200px;
+  background: #000000;
+  padding: 10px;
+}
+
+.sidebar .item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.sidebar .item:hover {
+  background: #000000;
+  transform: translateX(5px);
+}
+
+/* VIDEOS GRID */
+.videos {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* CARD */
+.card {
+  background: #000000;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* IMAGE TRANSITION */
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+/* TEXT */
+.card h4 {
+  margin: 10px;
+  font-size: 15px;
+  transition: color 0.3s ease;
+  color: white;
+}
+
+.card p {
+  margin: 0 10px 10px;
+  font-size: 13px;
+  color: gray;
+  transition: color 0.3s ease;
+}
+
+.card:hover h4 {
+  color: #ffffff;
+}
+
+.card:hover p {
+  color: #555;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> Calculator fudud </title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen flex items-center justify-center bg-gray-100">
+
+<!-- Calculator Box -->
+<div class="bg-indigo-600 p-4 rounded-xl w-64">
+
+  <!-- Display -->
+  <input
+    id="display"
+    type="text"
+    class="w-full h-12 mb-4 text-right text-xl px-3 rounded"
+    disabled
+  />
+
+  <!-- Buttons -->
+  <div class="grid grid-cols-4 gap-2">
+
+    <!-- Clear -->
+    <button onclick="clearAll()"
+            class="bg-red-500 col-span-4 p-3 rounded text-white text-lg">
+      C
+    </button>
+
+    <!-- Operators -->
+    <button onclick="addValue('/')" class="bg-indigo-500 p-3 rounded text-white text-lg">÷</button>
+    <button onclick="addValue('*')" class="bg-indigo-500 p-3 rounded text-white text-lg">×</button>
+    <button onclick="addValue('-')" class="bg-indigo-500 p-3 rounded text-white text-lg">−</button>
+    <button onclick="addValue('+')" class="bg-indigo-500 p-3 rounded text-white text-lg">+</button>
+
+    <!-- Numbers -->
+    <button onclick="addValue('7')" class="bg-indigo-500 p-3 rounded text-white text-lg">7</button>
+    <button onclick="addValue('8')" class="bg-indigo-500 p-3 rounded text-white text-lg">8</button>
+    <button onclick="addValue('9')" class="bg-indigo-500 p-3 rounded text-white text-lg">9</button>
+
+    <button onclick="addValue('4')" class="bg-indigo-500 p-3 rounded text-white text-lg">4</button>
+    <button onclick="addValue('5')" class="bg-indigo-500 p-3 rounded text-white text-lg">5</button>
+    <button onclick="addValue('6')" class="bg-indigo-500 p-3 rounded text-white text-lg">6</button>
+
+    <button onclick="addValue('1')" class="bg-indigo-500 p-3 rounded text-white text-lg">1</button>
+    <button onclick="addValue('2')" class="bg-indigo-500 p-3 rounded text-white text-lg">2</button>
+    <button onclick="addValue('3')" class="bg-indigo-500 p-3 rounded text-white text-lg">3</button>
+
+    <button onclick="addValue('0')"
+            class="bg-indigo-500 p-3 rounded text-white text-lg col-span-2">
+      0
+    </button>
+
+    <button onclick="addValue('.')"
+            class="bg-indigo-500 p-3 rounded text-white text-lg">
+      .
+    </button>
+
+    <button onclick="calculate()"
+            class="bg-green-500 p-3 rounded text-white text-lg">
+      =
+    </button>
+
+  </div>
+</div>
+
+<!-- JavaScript -->
+<script>
+
+  // hel input-ka display-ga
+  const display = document.getElementById("display");
+
+  // ku dar tiro ama calaamad
+  function addValue(val){
+    display.value += val;
+    console.log("Input:", display.value);
+  }
+
+  // tirtir dhammaan
+  function clearAll(){
+    display.value = "";
+    console.log("Cleared");
+  }
+
+  // xisaabi natiijada adigoo isticmaalaya if / else
+
+  function calculate(){
+    let exp = display.value;
+    let result = 0;
+
+    if (exp.includes("+")) {
+      let parts = exp.split("+");
+      result = Number(parts[0]) + Number(parts[1]);
+
+    } else if (exp.includes("-")) {
+      let parts = exp.split("-");
+      result = Number(parts[0]) - Number(parts[1]);
+
+    } else if (exp.includes("*")) {
+      let parts = exp.split("*");
+      result = Number(parts[0]) * Number(parts[1]);
+
+    } else if (exp.includes("/")) {
+      let parts = exp.split("/");
+      result = Number(parts[0]) / Number(parts[1]);
+    }
+
+    display.value = result;
+    console.log("Result:", result);
+  }
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
